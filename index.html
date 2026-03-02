@@ -40,7 +40,7 @@
       background: linear-gradient(180deg, #f9fbff 0, #f3f7ff 100%);
       border-radius: 24px;
       padding: 24px 20px 22px;
-      margin-bottom: 40px;
+      margin-bottom: 30px; /* меньше расстояние до следующего блока */
     }
 
     .logo {
@@ -56,14 +56,32 @@
     }
 
     .phone-wrapper {
+      position: relative;          /* для градиента */
       display: flex;
       justify-content: center;
       margin-bottom: 18px;
     }
 
+    /* Градиент между телефоном и заголовком, прячущий нижний контур рамки */
+    .phone-wrapper::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -6px;               /* немного заходит под заголовок */
+      height: 38px;
+      background: linear-gradient(
+        to bottom,
+        rgba(249, 251, 255, 0) 0%,
+        #f9fbff 55%,
+        #f3f7ff 100%
+      );
+      pointer-events: none;
+    }
+
     .phone-frame {
       width: min(72vw, 250px);
-      aspect-ratio: 9 / 15; /* более низкий телефон, верхняя часть экрана */
+      aspect-ratio: 9 / 12;       /* обрезаем скрин выше */
       border-radius: 28px;
       padding: 8px;
       background: linear-gradient(145deg, #dbe9ff, #ffffff);
@@ -78,7 +96,6 @@
       border-radius: 22px;
       overflow: hidden;
       background: #ffffff;
-      position: relative; /* для градиента */
     }
 
     .phone-screen img {
@@ -87,23 +104,6 @@
       height: 100%;
       object-fit: cover;
       object-position: top;
-    }
-
-    /* Градиент, мягко перекрывающий низ телефона и заголовок "Популярное LIVE" */
-    .phone-screen::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 38%; /* при необходимости можно увеличить/уменьшить */
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 0%,
-        #f9fbff 55%,
-        #f3f7ff 100%
-      );
-      pointer-events: none;
     }
 
     .cta-title {
@@ -175,7 +175,7 @@
 
     .install-section {
       border-radius: 18px;
-      padding: 18px 14px 10px;
+      padding: 16px 14px 10px; /* чуть меньше сверху */
       background: rgba(240, 244, 255, 0.9);
       color: #6a7ba5;
     }
@@ -282,7 +282,7 @@
       .card {
         padding: 20px 14px 18px;
         border-radius: 18px;
-        margin-bottom: 32px;
+        margin-bottom: 26px;
       }
 
       .cta-title {
