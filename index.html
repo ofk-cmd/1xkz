@@ -39,14 +39,14 @@
     .card {
       background: linear-gradient(180deg, #f9fbff 0, #f3f7ff 100%);
       border-radius: 24px;
-      padding: 26px 20px 22px;
-      margin-bottom: 40px; /* больше расстояние до следующего блока */
+      padding: 24px 20px 22px;
+      margin-bottom: 40px;
     }
 
     .logo {
       display: flex;
       justify-content: center;
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     .logo img {
@@ -58,13 +58,13 @@
     .phone-wrapper {
       display: flex;
       justify-content: center;
-      margin-bottom: 24px;
+      margin-bottom: 18px;
     }
 
     .phone-frame {
-      width: min(72vw, 260px);
-      aspect-ratio: 9 / 19;
-      border-radius: 30px;
+      width: min(72vw, 250px);
+      aspect-ratio: 9 / 15; /* было 9/19 — телефон ниже */
+      border-radius: 28px;
       padding: 8px;
       background: linear-gradient(145deg, #dbe9ff, #ffffff);
       display: flex;
@@ -75,7 +75,7 @@
     .phone-screen {
       width: 100%;
       height: 100%;
-      border-radius: 24px;
+      border-radius: 22px;
       overflow: hidden;
       background: #ffffff;
     }
@@ -85,14 +85,17 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top; /* показываем верхнюю часть скрина */
     }
 
     .cta-title {
       text-align: center;
-      font-size: 20px;
+      font-size: 22px; /* увеличен */
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #122955;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
     }
 
     .cta-title span {
@@ -103,7 +106,7 @@
       text-align: center;
       font-size: 14px;
       color: #50618a;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       line-height: 1.5;
     }
 
@@ -117,13 +120,13 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 12px 26px;
+      padding: 14px 30px; /* больше кнопка */
       border-radius: 999px;
       border: none;
       background: linear-gradient(90deg, #00a3ff 0, #32d4ff 100%);
       color: #ffffff;
       font-weight: 700;
-      font-size: 15px;
+      font-size: 16px; /* крупнее текст */
       text-decoration: none;
       cursor: pointer;
       transition: transform 0.12s ease-out, filter 0.12s ease-out;
@@ -140,22 +143,22 @@
     }
 
     .btn-icon {
-      width: 18px;
-      height: 18px;
+      width: 20px;
+      height: 20px;
       border-radius: 999px;
       background: rgba(255, 255, 255, 0.18);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
+      font-size: 12px;
     }
 
-    /* Блок "Как установить приложение для Android?" — более тихий */
+    /* Блок "Как установить приложение для Android?" — менее заметный */
 
     .install-section {
       border-radius: 18px;
       padding: 18px 14px 10px;
-      background: rgba(240, 244, 255, 0.9); /* светлее и менее контрастный фон */
+      background: rgba(240, 244, 255, 0.9);
       color: #6a7ba5;
     }
 
@@ -166,7 +169,7 @@
       line-height: 1.2;
       margin-bottom: 6px;
       letter-spacing: -0.01em;
-      color: #3a4b74; /* мягкий, не такой тёмный, как основной заголовок */
+      color: #3a4b74;
     }
 
     .install-subtitle{
@@ -192,7 +195,7 @@
 
     .slider-track {
       display: flex;
-      width: 600%; /* 6 слайдов */
+      width: 600%;
       transition: transform 0.4s ease-in-out;
     }
 
@@ -265,11 +268,7 @@
       }
 
       .cta-title {
-        font-size: 18px;
-      }
-
-      .cta-desc {
-        font-size: 13px;
+        font-size: 20px;
       }
 
       .btn-download {
@@ -287,14 +286,12 @@
     <!-- Первый экран -->
     <section class="card">
       <div class="logo">
-        <!-- Логотип 1xbet: файл 1xlogo.png -->
         <img src="1xlogo.png" alt="1xbet.kz логотип" loading="lazy" />
       </div>
 
       <div class="phone-wrapper">
         <div class="phone-frame">
           <div class="phone-screen">
-            <!-- Скриншот мобильной версии 1xbet.kz: файл 1xbet.png -->
             <img src="1xbet.png" alt="Мобильная версия 1xbet.kz" loading="lazy" />
           </div>
         </div>
@@ -325,7 +322,6 @@
 
       <div class="slider" id="installSlider">
         <div class="slider-track">
-          <!-- Шаг 1 -->
           <div class="slide">
             <div class="slide-step-label">Шаг 1</div>
             <div class="slide-title">Нажмите «Загрузить»</div>
@@ -334,7 +330,6 @@
             </p>
           </div>
 
-          <!-- Шаг 2 -->
           <div class="slide">
             <div class="slide-step-label">Шаг 2</div>
             <div class="slide-title">Откройте настройки телефона</div>
@@ -343,7 +338,6 @@
             </p>
           </div>
 
-          <!-- Шаг 3 -->
           <div class="slide">
             <div class="slide-step-label">Шаг 3</div>
             <div class="slide-title">Разрешите установку из этого источника</div>
@@ -352,7 +346,6 @@
             </p>
           </div>
 
-          <!-- Шаг 4 -->
           <div class="slide">
             <div class="slide-step-label">Шаг 4</div>
             <div class="slide-title">Нажмите на скачанный файл приложения</div>
@@ -361,7 +354,6 @@
             </p>
           </div>
 
-          <!-- Шаг 5 -->
           <div class="slide">
             <div class="slide-step-label">Шаг 5</div>
             <div class="slide-title">Нажмите кнопку «Установить»</div>
@@ -370,7 +362,6 @@
             </p>
           </div>
 
-          <!-- Шаг 6 -->
           <div class="slide">
             <div class="slide-step-label">Шаг 6</div>
             <div class="slide-title">Откройте установленное приложение</div>
@@ -400,20 +391,13 @@
     // Проброс параметров в ссылку
     (function () {
       var BASE_URL = "https://reffpa.com/L";
-
       var search = window.location.search || "";
       var params = new URLSearchParams(search);
       var outgoing = new URLSearchParams();
 
-      if (params.has("tag")) {
-        outgoing.set("tag", params.get("tag"));
-      }
-      if (params.has("click_id")) {
-        outgoing.set("click_id", params.get("click_id"));
-      }
-      if (params.has("pb")) {
-        outgoing.set("pb", params.get("pb"));
-      }
+      if (params.has("tag")) outgoing.set("tag", params.get("tag"));
+      if (params.has("click_id")) outgoing.set("click_id", params.get("click_id"));
+      if (params.has("pb")) outgoing.set("pb", params.get("pb"));
 
       var finalHref = outgoing.toString()
         ? BASE_URL + "?" + outgoing.toString()
@@ -435,7 +419,7 @@
       var dots = dotsContainer ? dotsContainer.querySelectorAll(".slider-dot") : [];
       var total = 6;
       var index = 0;
-      var interval = 4500; // мс
+      var interval = 4500;
 
       function updateSlider(newIndex) {
         index = (newIndex + total) % total;
@@ -456,7 +440,6 @@
         }, interval);
       }
 
-      // Клик по точкам
       if (dots.forEach) {
         dots.forEach(function (dot, i) {
           dot.addEventListener("click", function () {
@@ -466,7 +449,6 @@
         });
       }
 
-      // Свайп
       var startX = null;
       track.addEventListener("touchstart", function (e) {
         if (!e.touches || !e.touches.length) return;
