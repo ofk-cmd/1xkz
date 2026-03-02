@@ -11,11 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Roboto Condensed", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -28,47 +24,31 @@
       padding: 24px 16px 32px;
     }
 
-    .page {
-      width: 100%;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
-    /* Первый экран */
+    .page { width: 100%; max-width: 480px; margin: 0 auto; }
 
     .card {
       background: linear-gradient(180deg, #f9fbff 0, #f3f7ff 100%);
       border-radius: 24px;
       padding: 24px 20px 22px;
-      margin-bottom: 30px; /* меньше расстояние до следующего блока */
+      margin-bottom: 30px;
     }
 
-    .logo {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 18px;
-    }
-
-    .logo img {
-      max-height: 32px;
-      height: auto;
-      width: auto;
-    }
+    .logo { display: flex; justify-content: center; margin-bottom: 18px; }
+    .logo img { max-height: 32px; height: auto; width: auto; }
 
     .phone-wrapper {
-      position: relative;          /* для градиента */
+      position: relative;
       display: flex;
       justify-content: center;
       margin-bottom: 18px;
     }
 
-    /* Градиент между телефоном и заголовком, прячущий нижний контур рамки */
     .phone-wrapper::after {
       content: "";
       position: absolute;
       left: 0;
       right: 0;
-      bottom: -6px;               /* немного заходит под заголовок */
+      bottom: -6px;
       height: 38px;
       background: linear-gradient(
         to bottom,
@@ -81,7 +61,7 @@
 
     .phone-frame {
       width: min(72vw, 250px);
-      aspect-ratio: 9 / 12;       /* обрезаем скрин выше */
+      aspect-ratio: 9 / 12;
       border-radius: 28px;
       padding: 8px;
       background: linear-gradient(145deg, #dbe9ff, #ffffff);
@@ -116,9 +96,7 @@
       line-height: 1.2;
     }
 
-    .cta-title span {
-      color: #00a3ff;
-    }
+    .cta-title span { color: #00a3ff; }
 
     .cta-desc {
       text-align: center;
@@ -128,10 +106,7 @@
       line-height: 1.5;
     }
 
-    .btn-wrapper {
-      display: flex;
-      justify-content: center;
-    }
+    .btn-wrapper { display: flex; justify-content: center; }
 
     .btn-download {
       display: inline-flex;
@@ -151,14 +126,8 @@
       white-space: nowrap;
     }
 
-    .btn-download:hover {
-      transform: translateY(-1px) scale(1.01);
-      filter: brightness(1.05);
-    }
-
-    .btn-download:active {
-      transform: translateY(0) scale(0.98);
-    }
+    .btn-download:hover { transform: translateY(-1px) scale(1.01); filter: brightness(1.05); }
+    .btn-download:active { transform: translateY(0) scale(0.98); }
 
     .btn-icon {
       width: 20px;
@@ -171,11 +140,9 @@
       font-size: 12px;
     }
 
-    /* Блок "Как установить приложение для Android?" — менее заметный */
-
     .install-section {
       border-radius: 18px;
-      padding: 16px 14px 10px; /* чуть меньше сверху */
+      padding: 16px 14px 10px;
       background: rgba(240, 244, 255, 0.9);
       color: #6a7ba5;
     }
@@ -213,7 +180,7 @@
 
     .slider-track {
       display: flex;
-      width: 600%; /* 6 слайдов */
+      width: 600%;
       transition: transform 0.4s ease-in-out;
     }
 
@@ -262,10 +229,7 @@
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .slider-dot.active {
-      background: #7fa9ff;
-      transform: scale(1.05);
-    }
+    .slider-dot.active { background: #7fa9ff; transform: scale(1.05); }
 
     .install-hint{
       text-align: center;
@@ -279,29 +243,15 @@
     }
 
     @media (max-width: 360px) {
-      .card {
-        padding: 20px 14px 18px;
-        border-radius: 18px;
-        margin-bottom: 26px;
-      }
-
-      .cta-title {
-        font-size: 20px;
-      }
-
-      .btn-download {
-        width: 100%;
-      }
-
-      .install-section {
-        padding: 14px 10px 10px;
-      }
+      .card { padding: 20px 14px 18px; border-radius: 18px; margin-bottom: 26px; }
+      .cta-title { font-size: 20px; }
+      .btn-download { width: 100%; }
+      .install-section { padding: 14px 10px 10px; }
     }
   </style>
 </head>
 <body>
   <div class="page">
-    <!-- Первый экран -->
     <section class="card">
       <div class="logo">
         <img src="1xlogo.png" alt="1xbet.kz логотип" loading="lazy" />
@@ -316,7 +266,7 @@
       </div>
 
       <div class="cta-title">
-        Установите официальное приложение <span>1xbet.kz</span>
+        Установите официальное приложение
       </div>
 
       <div class="cta-desc">
@@ -331,7 +281,6 @@
       </div>
     </section>
 
-    <!-- Блок "Как установить приложение для Android?" -->
     <section class="install-section">
       <h2 class="install-title">Как установить приложение для Android?</h2>
       <p class="install-subtitle">
@@ -406,24 +355,33 @@
   </div>
 
   <script>
-    // Проброс параметров в ссылку
+    // Проброс параметров в ссылку + дефолтный tag
     (function () {
+      var DEFAULT_URL = "https://reffpa.com/L?tag=s_5310457m_1524c_organic";
       var BASE_URL = "https://reffpa.com/L";
-      var search = window.location.search || "";
-      var params = new URLSearchParams(search);
-      var outgoing = new URLSearchParams();
 
-      if (params.has("tag")) outgoing.set("tag", params.get("tag"));
+      var params = new URLSearchParams(window.location.search || "");
+      var hasTag = params.has("tag") && (params.get("tag") || "").trim() !== "";
+
+      // Если tag отсутствует/пустой — ставим дефолтную ссылку целиком
+      if (!hasTag) {
+        var btns0 = document.querySelectorAll("[data-download-btn]");
+        for (var j = 0; j < btns0.length; j++) btns0[j].setAttribute("href", DEFAULT_URL);
+        return;
+      }
+
+      // Иначе — собираем ссылку как раньше (tag + click_id + pb при наличии)
+      var outgoing = new URLSearchParams();
+      outgoing.set("tag", params.get("tag"));
+
       if (params.has("click_id")) outgoing.set("click_id", params.get("click_id"));
       if (params.has("pb")) outgoing.set("pb", params.get("pb"));
 
-      var finalHref = outgoing.toString()
-        ? BASE_URL + "?" + outgoing.toString()
-        : BASE_URL;
+      var finalHref = BASE_URL + "?" + outgoing.toString();
 
-      var buttons = document.querySelectorAll("[data-download-btn]");
-      for (var i = 0; i < buttons.length; i++) {
-        buttons[i].setAttribute("href", finalHref);
+      var btns = document.querySelectorAll("[data-download-btn]");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].setAttribute("href", finalHref);
       }
     })();
 
@@ -447,15 +405,11 @@
         }
       }
 
-      var timer = setInterval(function () {
-        updateSlider(index + 1);
-      }, interval);
+      var timer = setInterval(function () { updateSlider(index + 1); }, interval);
 
       function resetTimer() {
         clearInterval(timer);
-        timer = setInterval(function () {
-          updateSlider(index + 1);
-        }, interval);
+        timer = setInterval(function () { updateSlider(index + 1); }, interval);
       }
 
       if (dots.forEach) {
